@@ -56,7 +56,8 @@ elif [ $isReactNativeEnabled -eq 1 ]; then
     if test ! -z $NODE_OPTION_FLAG; then
         export NODE_OPTIONS=${NODE_OPTION_FLAG}
     fi
-    $ReactNativeBin run build
+    
+    $ReactNativeBin run build:ios
 fi
 if test ! -z $(grep 'CFBundleShortVersionString' "${WORKSPACE}/${INFO_PLIST}"); then
     if [ -f "${WORKSPACE}/${INFO_PLIST}" ]; then
